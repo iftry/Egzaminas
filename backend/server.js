@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// ✅ Updated route list
+// routes list
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/categories', categoryRoutes);
