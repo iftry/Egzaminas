@@ -15,7 +15,10 @@ const EventForm = () => {
 
   useEffect(() => {
     axios.get('/api/categories')
-      .then(res => setCategories(res.data))
+      .then(res => {
+        console.log('Fetched categories:', res.data); 
+        setCategories(res.data);
+      })
       .catch(err => console.error(err));
   }, []);
 
